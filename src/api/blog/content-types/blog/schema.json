@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blogs",
+  "info": {
+    "singularName": "blog",
+    "pluralName": "blogs",
+    "displayName": "blog",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "minLength": 30,
+      "maxLength": 300,
+      "required": true
+    },
+    "CreatedOn": {
+      "type": "date",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "Description": {
+      "type": "text",
+      "required": true,
+      "maxLength": 500,
+      "minLength": 100
+    },
+    "BlogContent": {
+      "type": "text",
+      "required": true
+    },
+    "MinToRead": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}
